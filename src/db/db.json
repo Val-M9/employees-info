@@ -1,0 +1,65 @@
+{
+  "employees": 
+  [
+    {
+      "id": "1",
+      "fullName": "Bruce Wane",
+      "birthday": "02.08.1978",
+      "position": "CEO",
+      "occupySince": "03.03.2000",
+      "previousPositions": [
+        "none"
+      ]
+    },
+    {
+      "id": "1",
+      "fullName": "Bruce Wane",
+      "birthday": "02.08.1978",
+      "position": "CEO",
+      "occupySince": "03.03.2000",
+      "previousPositions": [
+        "none"
+      ]
+    },
+    {
+      "id": "1",
+      "fullName": "Bruce Wane",
+      "birthday": "02.08.1978",
+      "position": "CEO",
+      "occupySince": "03.03.2000",
+      "previousPositions": [
+        "none"
+      ]
+    },
+    {
+      "id": "1",
+      "fullName": "Bruce Wane",
+      "birthday": "02.08.1978",
+      "position": "CEO",
+      "occupySince": "03.03.2000",
+      "previousPositions": [
+        "none"
+      ]
+    },
+    {
+      "id": "1",
+      "fullName": "Bruce Wane",
+      "birthday": "02.08.1978",
+      "position": "CEO",
+      "occupySince": "03.03.2000",
+      "previousPositions": [
+        "none"
+      ]
+    },
+    {
+      "id": "1",
+      "fullName": "Bruce Wane",
+      "birthday": "02.08.1978",
+      "position": "CEO",
+      "occupySince": "03.03.2000",
+      "previousPositions": [
+        "none"
+      ]
+    }
+  ]
+}
