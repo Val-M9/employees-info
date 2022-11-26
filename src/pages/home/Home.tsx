@@ -1,18 +1,12 @@
-import React, { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../hooks';
-import { fetchEmployees } from '../../store/actions';
-import { selectEmployees } from '../../store/selectors';
+import { FC } from 'react';
+import { EmployeesList } from '../../components';
 
-const Home = () => {
-  const dispatch = useAppDispatch();
-  const employees = useAppSelector(selectEmployees);
-
-  useEffect(() => {
-    dispatch(fetchEmployees());
-  }, [dispatch]);
-
-  console.log(employees);
-  return <div>Home</div>;
+const Home: FC = () => {
+  return (
+    <div>
+      <EmployeesList />
+    </div>
+  );
 };
 
 export { Home };

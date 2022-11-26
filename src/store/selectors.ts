@@ -9,4 +9,12 @@ const selectEmployeesDataStatus = (state: RootState): DataStatus => {
   return state.employees.dataStatus;
 };
 
-export { selectEmployees, selectEmployeesDataStatus };
+const selectHasMoreEmployees = (state: RootState): boolean => {
+  return state.employees.hasMore;
+};
+
+const selectCurrentPage = (state: RootState): number => {
+  return state.employees.currentPage;
+};
+
+export { selectEmployees, selectEmployeesDataStatus, selectHasMoreEmployees, selectCurrentPage };

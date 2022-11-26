@@ -1,2 +1,2 @@
-export type { EmployeeDto, EmployeesDto } from './data-base/db';
+export type { EmployeeDto, EmployeesDto, QueryParams } from './data-base';
 export type { AppDispatch, AppState, AsyncThunkConfig, RootState } from './store/';
