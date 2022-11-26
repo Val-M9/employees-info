@@ -1,8 +1,11 @@
 {
-  "name": "darly-solutions-test",
+  "name": "employees-info",
   "version": "0.1.0",
   "prettier": "@employees-info/prettier-config",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.15",
     "@reduxjs/toolkit": "1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -11,7 +14,6 @@
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
-    "antd": "5.0.1",
     "axios": "1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -23,7 +25,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start && json-server --watch ./src/db/db.json --port 3004",
+    "start": "react-scripts start",
+    "server": "json-server --watch ./src/db/db.json --port 3004",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

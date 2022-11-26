@@ -7,59 +7,142 @@
       "birthday": "02.08.1978",
       "position": "CEO",
       "occupySince": "03.03.2000",
-      "previousPositions": [
-        "none"
-      ]
+      "contacts": {
+        "email": "batman@mail.com",
+        "phone": "80999999999"
+      }
     },
     {
-      "id": "1",
-      "fullName": "Bruce Wane",
-      "birthday": "02.08.1978",
-      "position": "CEO",
-      "occupySince": "03.03.2000",
-      "previousPositions": [
-        "none"
-      ]
+      "id": "2",
+      "fullName": "Frank Herbert",
+      "birthday": "02.08.1961",
+      "position": "Writer",
+      "occupySince": "03.03.1980",
+      "contacts": {
+        "email": "franckeee@mail.com",
+        "phone": "80999991999"
+      }
     },
     {
-      "id": "1",
-      "fullName": "Bruce Wane",
-      "birthday": "02.08.1978",
-      "position": "CEO",
+      "id": "3",
+      "fullName": "Monica Geller",
+      "birthday": "02.08.1975",
+      "position": "Character",
       "occupySince": "03.03.2000",
-      "previousPositions": [
-        "none"
-      ]
+      "contacts": {
+        "email": "batman@mail.com",
+        "phone": "80999999999"
+      }
     },
     {
-      "id": "1",
-      "fullName": "Bruce Wane",
-      "birthday": "02.08.1978",
-      "position": "CEO",
+      "id": "4",
+      "fullName": "Rachel Green",
+      "birthday": "02.08.1976",
+      "position": "Character",
       "occupySince": "03.03.2000",
-      "previousPositions": [
-        "none"
-      ]
+      "contacts": {
+        "email": "batman@mail.com",
+        "phone": "80999999999"
+      }
     },
     {
-      "id": "1",
-      "fullName": "Bruce Wane",
+      "id": "5",
+      "fullName": "Billy Bob Thornton",
       "birthday": "02.08.1978",
-      "position": "CEO",
+      "position": "Actor",
       "occupySince": "03.03.2000",
-      "previousPositions": [
-        "none"
-      ]
+      "contacts": {
+        "email": "billybobbie@mail.com",
+        "phone": "80999999999"
+      }
     },
     {
-      "id": "1",
-      "fullName": "Bruce Wane",
+      "id": "6",
+      "fullName": "Naomi Wats",
       "birthday": "02.08.1978",
-      "position": "CEO",
+      "position": "Actress",
       "occupySince": "03.03.2000",
-      "previousPositions": [
-        "none"
-      ]
+      "contacts": {
+        "email": "nanananomi@mail.com",
+        "phone": "80999999999"
+      }
+    },
+    {
+      "id": "7",
+      "fullName": "Emma Fitzgerald",
+      "birthday": "02.08.1978",
+      "position": "Actress",
+      "occupySince": "03.03.2000",
+      "contacts": {
+        "email": "notthatfitz@mail.com",
+        "phone": "80999999999"
+      }
+    },
+    {
+      "id": "8",
+      "fullName": "Morgan Freeman",
+      "birthday": "02.08.1978",
+      "position": "Actor",
+      "occupySince": "03.03.2000",
+      "contacts": {
+        "email": "morgannnn@mail.com",
+        "phone": "80999999999"
+      }
+    },
+    {
+      "id": "9",
+      "fullName": "Luke Skywalker",
+      "birthday": "02.08.1978",
+      "position": "Jedi",
+      "occupySince": "03.03.2000",
+      "contacts": {
+        "email": "sucker-jedi@mail.com",
+        "phone": "80999999999"
+      }
+    },
+    {
+      "id": "10",
+      "fullName": "Mariam Petrosyan",
+      "birthday": "02.08.1978",
+      "position": "Writer",
+      "occupySince": "03.03.2000",
+      "contacts": {
+        "email": "batman@mail.com",
+        "phone": "80999999999"
+      }
+    },
+    {
+      "id": "11",
+      "fullName": "Some Guy",
+      "birthday": "02.08.1978",
+      "position": "Undefined",
+      "occupySince": "03.03.2000",
+      "contacts": {
+        "email": "batman@mail.com",
+        "phone": "80999999999"
+      }
+    },
+    {
+      "id": "12",
+      "fullName": "Chandler Bing",
+      "birthday": "02.08.1978",
+      "position": "Character",
+      "occupySince": "03.03.2000",
+      "contacts": {
+        "email": "batman@mail.com",
+        "phone": "80999999999"
+      }
+    },
+    {
+      "id": "13",
+      "fullName": "Ron Wisely",
+      "birthday": "02.08.1978",
+      "position": "Character",
+      "occupySince": "03.03.2000",
+      "contacts": {
+        "email": "batman@mail.com",
+        "phone": "80999999999"
+      }
     }
   ]
 }
