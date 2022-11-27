@@ -16,13 +16,23 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           position: 'relative',
-          width: '90%',
-          left: '2px',
-          maxWidth: '1440px',
-          margin: '150px auto',
+          left: '3px',
+          margin: '150px auto 70px',
           maxHeight: '500px',
           border: `2px solid ${ColorPalette.TEAL_800}`,
           borderRadius: '5px',
+        },
+      },
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          backgroundColor: `${ColorPalette.TEAL_800}`,
+          color: `${ColorPalette.WHITE}`,
+          height: '70px',
+          fontSize: '16px',
+          fontWeight: '700',
+          borderRight: `1px solid ${ColorPalette.WHITE}`,
         },
       },
     },

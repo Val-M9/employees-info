@@ -3,9 +3,10 @@ import {
   TableContainer,
   Table,
   TableRow,
-  TableCell,
   TableBody,
   CircularProgress,
+  TableHead,
+  TableCell,
 } from '@mui/material';
 import { DataStatus } from '../../common/enums';
 import { useAppDispatch, useAppSelector } from '../../hooks';
@@ -16,7 +17,7 @@ import {
   selectEmployeesDataStatus,
   selectHasMoreEmployees,
 } from '../../store/selectors';
-import { STableBodyCell, STableHead, STableRow, STableHeadCell } from './styles';
+import { STableBodyCell, STableRow } from './styles';
 
 const EmployeesList: FC = () => {
   const [distanceBottom, setDistanceBottom] = useState(0);
@@ -59,15 +60,15 @@ const EmployeesList: FC = () => {
     <TableContainer ref={tableEl}>
       {isLoading && <CircularProgress />}
       <Table stickyHeader>
-        <STableHead style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
+        <TableHead>
           <TableRow>
-            <STableHeadCell>Full Name</STableHeadCell>
-            <STableHeadCell>Birthday</STableHeadCell>
-            <STableHeadCell>Contacts</STableHeadCell>
-            <STableHeadCell>Position</STableHeadCell>
-            <STableHeadCell>Working Since</STableHeadCell>
+            <TableCell>Full Name</TableCell>
+            <TableCell>Birthday</TableCell>
+            <TableCell>Contacts</TableCell>
+            <TableCell>Position</TableCell>
+            <TableCell>Working Since</TableCell>
           </TableRow>
-        </STableHead>
+        </TableHead>
         <TableBody>
           {employees.personsInfo.map(
             ({ id, fullName, contacts, position, occupySince, birthday }) => (
