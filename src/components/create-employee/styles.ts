@@ -48,11 +48,17 @@ export const modal: SxProps = {
   mr: 2,
 };
 
+export const formLabel: SxProps = {
+  fontSize: 22,
+  fontWeight: 'bold',
+  color: `${ColorPalette.TEAL_900}`,
+};
+
 export const box: SxProps = {
   display: 'flex',
   flexDirection: 'column',
   width: 800,
-  height: 620,
+  height: 680,
   backgroundColor: 'background.paper',
   border: `2px solid ${ColorPalette.TEAL_800}`,
   borderRadius: '8px',
