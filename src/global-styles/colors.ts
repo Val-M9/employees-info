@@ -5,5 +5,6 @@ export enum ColorPalette {
   TEAL_400 = '#2b7d8f',
   TEAL_200 = '#2b9db5',
   GRAY_50 = '#bed9df',
+  GRAY_10 = '#e9eeef',
   WHITE = '#ffffff',
 }
