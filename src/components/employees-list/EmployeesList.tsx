@@ -2,11 +2,11 @@ import { FC, Ref, useCallback, useEffect, useLayoutEffect, useRef, useState } fr
 import {
   TableContainer,
   Table,
-  TableHead,
   TableRow,
-  TableCell,
   TableBody,
   CircularProgress,
+  TableHead,
+  TableCell,
 } from '@mui/material';
 import { DataStatus } from '../../common/enums';
 import { useAppDispatch, useAppSelector } from '../../hooks';
@@ -17,6 +17,7 @@ import {
   selectEmployeesDataStatus,
   selectHasMoreEmployees,
 } from '../../store/selectors';
+import { STableBodyCell, STableRow } from './styles';
 
 const EmployeesList: FC = () => {
   const [distanceBottom, setDistanceBottom] = useState(0);
@@ -56,13 +57,8 @@ const EmployeesList: FC = () => {
   }, [scrollListener]);
 
   return (
-    <TableContainer
-      style={{ maxWidth: '1440px', margin: 'auto', maxHeight: '400px' }}
-      ref={tableEl}
-    >
-      {isLoading && (
-        <CircularProgress style={{ position: 'absolute', top: '100px', left: '45%' }} />
-      )}
+    <TableContainer ref={tableEl}>
+      {isLoading && <CircularProgress />}
       <Table stickyHeader>
         <TableHead>
           <TableRow>
@@ -76,16 +72,16 @@ const EmployeesList: FC = () => {
         <TableBody>
           {employees.personsInfo.map(
             ({ id, fullName, contacts, position, occupySince, birthday }) => (
-              <TableRow key={id}>
-                <TableCell>{fullName}</TableCell>
-                <TableCell>{birthday}</TableCell>
-                <TableCell>
+              <STableRow key={id}>
+                <STableBodyCell>{fullName}</STableBodyCell>
+                <STableBodyCell>{birthday}</STableBodyCell>
+                <STableBodyCell>
                   Email: {contacts.email}
                   <br /> Phone: {contacts.phone}
-                </TableCell>
-                <TableCell>{position}</TableCell>
-                <TableCell>{occupySince}</TableCell>
-              </TableRow>
+                </STableBodyCell>
+                <STableBodyCell>{position}</STableBodyCell>
+                <STableBodyCell>{occupySince}</STableBodyCell>
+              </STableRow>
             ),
           )}
         </TableBody>
