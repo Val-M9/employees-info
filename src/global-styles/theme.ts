@@ -18,7 +18,7 @@ export const theme = createTheme({
           position: 'relative',
           left: '3px',
           margin: '150px auto 70px',
-          maxHeight: '500px',
+          height: '500px',
           border: `2px solid ${ColorPalette.TEAL_800}`,
           borderRadius: '5px',
         },

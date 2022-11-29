@@ -3,6 +3,12 @@ import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { Modal, Box, Button, FormLabel, Paper } from '@mui/material';
 import { createEmployeeRules } from '../../validation/createEmployeeRules';
+import { CreateEmployeeDto } from '../../common/types';
+import { DataStatus } from '../../common/enums';
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import { newEmployeeParser } from '../../helpers';
+import { addEmployee } from '../../store/actions';
+import { selectEmployeesDataStatus } from '../../store/selectors';
 import { Input } from '../input/Input';
 import { formLabel, box, modal, input, closeBtn, paper, submitBtn, datePicker } from './styles';
 
@@ -29,11 +35,21 @@ const CreateEmployee: FC<CreateEmployeeProps> = ({ isOpen, onToggleModal }) => {
     },
     resolver: joiResolver(createEmployeeRules),
   });
+  const dispatch = useAppDispatch();
+  const dataStatus = useAppSelector(selectEmployeesDataStatus);
+  const isLoading = dataStatus === DataStatus.PENDING;
 
-  const onSubmit = useCallback((data: any) => {
-    console.log('Data:', data);
-    reset();
-  }, []);
+  const onSubmit = useCallback(
+    (formData: CreateEmployeeDto) => {
+      dispatch(addEmployee(newEmployeeParser(formData)))
+        .unwrap()
+        .then(() => {
+          onToggleModal();
+        });
+      reset();
+    },
+    [dispatch, reset, onToggleModal],
+  );
 
   return (
     <Modal open={isOpen} sx={modal} onClose={onToggleModal}>
@@ -44,6 +60,7 @@ const CreateEmployee: FC<CreateEmployeeProps> = ({ isOpen, onToggleModal }) => {
         </Button>
         <Paper sx={{ ...paper }}>
           <Input
+            required={true}
             name="firstName"
             control={control}
             label="First Name"
@@ -51,6 +68,7 @@ const CreateEmployee: FC<CreateEmployeeProps> = ({ isOpen, onToggleModal }) => {
             errors={errors}
           />
           <Input
+            required={true}
             name="lastName"
             control={control}
             label="Last Name"
@@ -65,8 +83,16 @@ const CreateEmployee: FC<CreateEmployeeProps> = ({ isOpen, onToggleModal }) => {
             errors={errors}
             type="date"
           />
-          <Input name="email" control={control} label="Email" sx={{ ...input }} errors={errors} />
           <Input
+            required={true}
+            name="email"
+            control={control}
+            label="Email"
+            sx={{ ...input }}
+            errors={errors}
+          />
+          <Input
+            required={true}
             name="phone"
             control={control}
             label="Phone number"
@@ -74,6 +100,7 @@ const CreateEmployee: FC<CreateEmployeeProps> = ({ isOpen, onToggleModal }) => {
             errors={errors}
           />
           <Input
+            required={true}
             name="position"
             control={control}
             label="Position"
@@ -93,7 +120,7 @@ const CreateEmployee: FC<CreateEmployeeProps> = ({ isOpen, onToggleModal }) => {
             variant="outlined"
             sx={submitBtn}
             onClick={handleSubmit(onSubmit)}
-            // disabled={Boolean(errors)}
+            disabled={isLoading}
           >
             SUBMIT
           </Button>

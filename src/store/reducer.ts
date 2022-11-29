@@ -1,7 +1,7 @@
-import { createReducer } from '@reduxjs/toolkit';
+import { createReducer, isAnyOf } from '@reduxjs/toolkit';
 import { EmployeesDto } from './../common/types';
 import { DataStatus } from '../common/enums';
-import { fetchEmployees } from './actions';
+import { addEmployee, fetchEmployees } from './actions';
 
 type InitialState = {
   dataStatus: DataStatus;
@@ -21,9 +21,6 @@ const initialState: InitialState = {
 
 const employeesReducer = createReducer(initialState, (builder) => {
   builder
-    .addCase(fetchEmployees.pending, (state) => {
-      state.dataStatus = DataStatus.PENDING;
-    })
     .addCase(fetchEmployees.fulfilled, (state, { payload }) => {
       state.dataStatus = DataStatus.FULFILLED;
       state.employees.personsInfo = [...state.employees.personsInfo, ...payload.personsInfo];
@@ -33,6 +30,12 @@ const employeesReducer = createReducer(initialState, (builder) => {
       if (state.currentCount >= state.employees.totalCount) {
         state.hasMore = false;
       }
+    })
+    .addCase(addEmployee.fulfilled, (state) => {
+      state.dataStatus = DataStatus.FULFILLED;
+    })
+    .addMatcher(isAnyOf(fetchEmployees.pending, fetchEmployees.pending), (state) => {
+      state.dataStatus = DataStatus.PENDING;
     });
 });
 

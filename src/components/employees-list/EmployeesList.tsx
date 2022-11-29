@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { DataStatus } from '../../common/enums';
 import { useAppDispatch, useAppSelector } from '../../hooks';
+import { formatDate } from '../../helpers';
 import { fetchEmployees } from '../../store/actions';
 import {
   selectCurrentPage,
@@ -34,7 +35,7 @@ const EmployeesList: FC = () => {
     if (tableEl) {
       let bottom = Number(tableEl.current?.scrollHeight) - Number(tableEl.current?.clientHeight);
       if (!distanceBottom) {
-        setDistanceBottom(Math.round((bottom / 100) * 20));
+        setDistanceBottom(Math.round(bottom / 100));
       }
       if (Number(tableEl.current?.scrollTop) > bottom - distanceBottom && !isLoading && hasMore) {
         dispatch(fetchEmployees({ limit: 10, page: currentPage }));
@@ -74,13 +75,15 @@ const EmployeesList: FC = () => {
             ({ id, fullName, contacts, position, dateOfHiring, birthday }) => (
               <STableRow key={id}>
                 <STableBodyCell>{fullName}</STableBodyCell>
-                <STableBodyCell>{birthday}</STableBodyCell>
+                <STableBodyCell>{birthday ? formatDate(birthday) : '__.__.____'}</STableBodyCell>
                 <STableBodyCell>
                   Email: {contacts.email}
                   <br /> Phone: {contacts.phone}
                 </STableBodyCell>
                 <STableBodyCell>{position}</STableBodyCell>
-                <STableBodyCell>{dateOfHiring}</STableBodyCell>
+                <STableBodyCell>
+                  {dateOfHiring ? formatDate(dateOfHiring) : '__.__.____'}
+                </STableBodyCell>
               </STableRow>
             ),
           )}

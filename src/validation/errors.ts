@@ -3,5 +3,5 @@ export const errors = {
   MAX_NAME: 'Must be not more than 15 characters',
   EMPTY: 'Field is required',
   VALID_EMAIL: 'Please enter valid email',
-  VALID_PHONE: 'Phone must starts from 0 and contain only digits',
+  VALID_PHONE: 'Phone must starts from 0 and contain only 9 digits',
 };
