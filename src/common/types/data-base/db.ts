@@ -8,7 +8,7 @@ export type EmployeeDto = {
   fullName: string;
   birthday: string;
   position: string;
-  occupySince: string;
+  dateOfHiring: string;
   contacts: Contacts;
 };
 

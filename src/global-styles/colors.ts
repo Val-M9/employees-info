@@ -7,4 +7,5 @@ export enum ColorPalette {
   GRAY_50 = '#bed9df',
   GRAY_10 = '#e9eeef',
   WHITE = '#ffffff',
+  ERROR = '#ad1c30',
 }

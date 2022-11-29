@@ -71,7 +71,7 @@ const EmployeesList: FC = () => {
         </TableHead>
         <TableBody>
           {employees.personsInfo.map(
-            ({ id, fullName, contacts, position, occupySince, birthday }) => (
+            ({ id, fullName, contacts, position, dateOfHiring, birthday }) => (
               <STableRow key={id}>
                 <STableBodyCell>{fullName}</STableBodyCell>
                 <STableBodyCell>{birthday}</STableBodyCell>
@@ -80,7 +80,7 @@ const EmployeesList: FC = () => {
                   <br /> Phone: {contacts.phone}
                 </STableBodyCell>
                 <STableBodyCell>{position}</STableBodyCell>
-                <STableBodyCell>{occupySince}</STableBodyCell>
+                <STableBodyCell>{dateOfHiring}</STableBodyCell>
               </STableRow>
             ),
           )}

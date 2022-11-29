@@ -3,27 +3,14 @@ import { ColorPalette } from '../../global-styles/colors';
 
 const modalSlideIn = keyframes`
 0% {
-  -webkit-transform: translateX(1000px);
-          transform: translateX(1000px);
+  -webkit-transform: translateY(-1000px);
+          transform: translateY(-1000px);
   opacity: 0;
 }
 100% {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
-}
-`;
-
-const modalSlideOut = keyframes`
-0% {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  opacity: 1;
-}
-100% {
-  -webkit-transform: translateX(1000px);
-          transform: translateX(1000px);
-  opacity: 0;
 }
 `;
 
@@ -48,12 +35,18 @@ export const modal: SxProps = {
   mr: 2,
 };
 
+export const formLabel: SxProps = {
+  fontSize: 22,
+  fontWeight: 'bold',
+  color: `${ColorPalette.TEAL_900}`,
+};
+
 export const box: SxProps = {
   display: 'flex',
   flexDirection: 'column',
   width: 800,
-  height: 620,
-  backgroundColor: 'background.paper',
+  minHeight: 680,
+  backgroundColor: `${ColorPalette.WHITE}`,
   border: `2px solid ${ColorPalette.TEAL_800}`,
   borderRadius: '8px',
   boxShadow: 24,
@@ -61,16 +54,10 @@ export const box: SxProps = {
   animation: `${modalSlideIn} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`,
 };
 
-export const boxHide: SxProps = {
-  '& .MuiModal-root': {
-    animation: `${modalSlideOut} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`,
-  },
-};
-
 export const paper: SxProps = {
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'end',
+  alignItems: 'start',
   backgroundColor: `${ColorPalette.GRAY_10}`,
   mt: 4,
   p: 4,
@@ -89,6 +76,29 @@ export const input: SxProps = {
   },
   '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
     borderColor: `${ColorPalette.TEAL_600}`,
+  },
+  '& p': {
+    color: `${ColorPalette.ERROR}`,
+  },
+};
+
+export const datePicker: SxProps = {
+  width: '40%',
+  mt: 2,
+  borderRadius: 'inherit',
+  backgroundColor: `${ColorPalette.WHITE}`,
+  '& .MuiInputBase-root, & .MuiFormLabel-root, & .MuiFormLabel-root.Mui-focused': {
+    height: 45,
+    color: `${ColorPalette.TEAL_800}`,
+  },
+  '& .MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline': {
+    borderColor: `${ColorPalette.GRAY_50}`,
+  },
+  '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+    borderColor: `${ColorPalette.TEAL_600}`,
+  },
+  '& p': {
+    color: `${ColorPalette.ERROR}`,
   },
 };
 
