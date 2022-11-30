@@ -35,7 +35,7 @@ const EmployeesList: FC = () => {
     if (tableEl) {
       let bottom = Number(tableEl.current?.scrollHeight) - Number(tableEl.current?.clientHeight);
       if (!distanceBottom) {
-        setDistanceBottom(Math.round(bottom / 100));
+        setDistanceBottom(Math.round(bottom / 100) * 20);
       }
       if (Number(tableEl.current?.scrollTop) > bottom - distanceBottom && !isLoading && hasMore) {
         dispatch(fetchEmployees({ limit: 10, page: currentPage }));

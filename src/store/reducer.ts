@@ -26,9 +26,11 @@ const employeesReducer = createReducer(initialState, (builder) => {
       state.employees.personsInfo = [...state.employees.personsInfo, ...payload.personsInfo];
       state.employees.totalCount = payload.totalCount;
       state.currentCount = state.employees.personsInfo.length;
-      state.currentPage += state.currentPage;
       if (state.currentCount >= state.employees.totalCount) {
         state.hasMore = false;
+      }
+      if (state.hasMore === true) {
+        state.currentPage = state.currentPage + 1;
       }
     })
     .addCase(addEmployee.fulfilled, (state) => {

@@ -1,20 +1,10 @@
 import { FC } from 'react';
-import { SxProps, TextField } from '@mui/material';
+import { TextField } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { Control, Controller } from 'react-hook-form';
-import { CreateEmployeeDto, FieldsNames } from '../../common/types';
-
-type InputProps = {
-  name: FieldsNames;
-  control: Control<CreateEmployeeDto, any>;
-  label: string;
-  sx: SxProps;
-  errors: Record<string, any>;
-  type?: 'date' | undefined;
-  required?: boolean;
-};
+import { Controller } from 'react-hook-form';
+import { InputProps } from './prop-types';
 
 const Input: FC<InputProps> = ({ name, control, label, sx, errors, type, required }) => {
   const error = errors[name]?.message;

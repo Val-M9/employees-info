@@ -10,12 +10,8 @@ import { newEmployeeParser } from '../../helpers';
 import { addEmployee } from '../../store/actions';
 import { selectEmployeesDataStatus } from '../../store/selectors';
 import { Input } from '../input/Input';
+import { CreateEmployeeProps } from './prop-types';
 import { formLabel, box, modal, input, closeBtn, paper, submitBtn, datePicker } from './styles';
-
-type CreateEmployeeProps = {
-  isOpen: boolean;
-  onToggleModal: () => void;
-};
 
 const CreateEmployee: FC<CreateEmployeeProps> = ({ isOpen, onToggleModal }) => {
   const {

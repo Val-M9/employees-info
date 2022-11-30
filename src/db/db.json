@@ -182,6 +182,35 @@
         "phone": "0919119191"
       },
       "position": "Home cat"
+    },
+    {
+      "id": "58b95c2c-06e8-422c-a2f3-1972dc50243d",
+      "fullName": "Last Person",
+      "contacts": {
+        "email": "ipromise@mail.ua",
+        "phone": "0366666666"
+      },
+      "birthday": "2013-11-12T23:16:53.000Z",
+      "dateOfHiring": "2022-11-18T22:00:00.000Z",
+      "position": "noone"
+    },
+    {
+      "id": "fb4587fb-0c3a-4d4f-aaf2-08a9f7c7e04f",
+      "fullName": "Jack Sparrow",
+      "contacts": {
+        "email": "notime@mail.us",
+        "phone": "0333333333"
+      },
+      "position": "Pirate"
+    },
+    {
+      "id": "302afec4-0704-4b4c-9612-40f398565af7",
+      "fullName": "Spider Man",
+      "contacts": {
+        "email": "heighbor@mail.us",
+        "phone": "0636363633"
+      },
+      "position": "Student"
     }
   ]
 }
