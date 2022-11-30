@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { apiCall } from '../api-call/api-call';
+import { errorHandler } from './middlewares/error-handler';
 import { employeesReducer } from './reducer';
 
 const extraArgument = {
@@ -13,7 +14,7 @@ const store = configureStore({
       thunk: {
         extraArgument,
       },
-    });
+    }).concat(errorHandler);
     return defaultMiddleware;
   },
 });
