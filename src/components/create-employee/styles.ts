@@ -77,6 +77,9 @@ export const input: SxProps = {
   '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
     borderColor: `${ColorPalette.TEAL_600}`,
   },
+  '& 	.MuiFormLabel-asterisk': {
+    color: `${ColorPalette.ERROR}`,
+  },
   '& p': {
     color: `${ColorPalette.ERROR}`,
   },

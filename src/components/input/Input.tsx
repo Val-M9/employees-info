@@ -1,21 +1,12 @@
 import { FC } from 'react';
-import { SxProps, TextField } from '@mui/material';
-import { Control, Controller } from 'react-hook-form';
-import { CreateEmployeeDto } from '../../common/types';
+import { TextField } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { Controller } from 'react-hook-form';
+import { InputProps } from './prop-types';
 
-type InputProps = {
-  name: 'position' | 'firstName' | 'lastName' | 'phone' | 'email' | 'birthday' | 'dateOfHiring';
-  control: Control<CreateEmployeeDto, any>;
-  label: string;
-  sx: SxProps;
-  errors: Record<string, any>;
-  type?: 'date' | undefined;
-};
-
-const Input: FC<InputProps> = ({ name, control, label, sx, errors, type }) => {
+const Input: FC<InputProps> = ({ name, control, label, sx, errors, type, required }) => {
   const error = errors[name]?.message;
 
   return (
@@ -31,10 +22,11 @@ const Input: FC<InputProps> = ({ name, control, label, sx, errors, type }) => {
                   label={label}
                   value={value}
                   onChange={onChange}
+                  disableFuture={true}
                   renderInput={(params) => (
                     <TextField
                       label={label}
-                      value={value}
+                      value={JSON.stringify(value)}
                       onChange={onChange}
                       sx={sx}
                       {...params}
@@ -46,6 +38,7 @@ const Input: FC<InputProps> = ({ name, control, label, sx, errors, type }) => {
               </LocalizationProvider>
             ) : (
               <TextField
+                InputLabelProps={required ? { required: true } : { required: false }}
                 onChange={onChange}
                 onBlur={onBlur}
                 value={value}

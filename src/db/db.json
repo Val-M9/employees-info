@@ -1,12 +1,11 @@
 {
-  "employees": 
-  [
+  "employees": [
     {
       "id": "1",
       "fullName": "Bruce Wane",
       "birthday": "02.08.1978",
       "position": "CEO",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
         "email": "batman@mail.com",
         "phone": "80999999999"
@@ -17,7 +16,7 @@
       "fullName": "Frank Herbert",
       "birthday": "02.08.1961",
       "position": "Writer",
-      "occupySince": "03.03.1980",
+      "dateOfHiring": "03.03.1980",
       "contacts": {
         "email": "franckeee@mail.com",
         "phone": "80999991999"
@@ -28,9 +27,9 @@
       "fullName": "Monica Geller",
       "birthday": "02.08.1975",
       "position": "Character",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
-        "email": "batman@mail.com",
+        "email": "mon@mail.com",
         "phone": "80999999999"
       }
     },
@@ -39,9 +38,9 @@
       "fullName": "Rachel Green",
       "birthday": "02.08.1976",
       "position": "Character",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
-        "email": "batman@mail.com",
+        "email": "rach@mail.com",
         "phone": "80999999999"
       }
     },
@@ -50,7 +49,7 @@
       "fullName": "Billy Bob Thornton",
       "birthday": "02.08.1978",
       "position": "Actor",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
         "email": "billybobbie@mail.com",
         "phone": "80999999999"
@@ -61,7 +60,7 @@
       "fullName": "Naomi Wats",
       "birthday": "02.08.1978",
       "position": "Actress",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
         "email": "nanananomi@mail.com",
         "phone": "80999999999"
@@ -72,7 +71,7 @@
       "fullName": "Emma Fitzgerald",
       "birthday": "02.08.1978",
       "position": "Actress",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
         "email": "notthatfitz@mail.com",
         "phone": "80999999999"
@@ -83,7 +82,7 @@
       "fullName": "Morgan Freeman",
       "birthday": "02.08.1978",
       "position": "Actor",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
         "email": "morgannnn@mail.com",
         "phone": "80999999999"
@@ -94,7 +93,7 @@
       "fullName": "Luke Skywalker",
       "birthday": "02.08.1978",
       "position": "Jedi",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
         "email": "sucker-jedi@mail.com",
         "phone": "80999999999"
@@ -105,9 +104,9 @@
       "fullName": "Mariam Petrosyan",
       "birthday": "02.08.1978",
       "position": "Writer",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
-        "email": "batman@mail.com",
+        "email": "mariam@mail.com",
         "phone": "80999999999"
       }
     },
@@ -116,9 +115,9 @@
       "fullName": "Some Guy",
       "birthday": "02.08.1978",
       "position": "Undefined",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
-        "email": "batman@mail.com",
+        "email": "guy@mail.com",
         "phone": "80999999999"
       }
     },
@@ -127,9 +126,9 @@
       "fullName": "Chandler Bing",
       "birthday": "02.08.1978",
       "position": "Character",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
-        "email": "batman@mail.com",
+        "email": "chandler@mail.com",
         "phone": "80999999999"
       }
     },
@@ -138,11 +137,80 @@
       "fullName": "Ron Wisely",
       "birthday": "02.08.1978",
       "position": "Character",
-      "occupySince": "03.03.2000",
+      "dateOfHiring": "03.03.2000",
       "contacts": {
-        "email": "batman@mail.com",
+        "email": "ron@mail.com",
         "phone": "80999999999"
       }
+    },
+    {
+      "id": "cddf2226-c983-40cf-8178-bddf02e77b1e",
+      "fullName": "Trevor Noah",
+      "contacts": {
+        "email": "somemail@mail.com",
+        "phone": "0636363333"
+      },
+      "position": "Comedian"
+    },
+    {
+      "id": "d39f2d3b-77ac-4ecb-b7ba-d83111dae625",
+      "fullName": "Lee Cooper",
+      "contacts": {
+        "email": "lee@mail.ua",
+        "phone": "0555555555"
+      },
+      "birthday": "\"2022-10-31T22:00:00.000Z\"",
+      "dateOfHiring": "\"2022-11-04T22:00:00.000Z\"",
+      "position": "I wish I know"
+    },
+    {
+      "id": "46929fc3-7a69-45ba-a805-88ca2fa304b4",
+      "fullName": "Ben Camderbumble",
+      "contacts": {
+        "email": "cucuber@mail.fr",
+        "phone": "0636363633"
+      },
+      "birthday": "2022-11-15T22:00:00.000Z",
+      "dateOfHiring": "2022-11-01T22:00:00.000Z",
+      "position": "Actor"
+    },
+    {
+      "id": "d3b80cc2-980f-4ef7-8a5c-15bad5457889",
+      "fullName": "Tom The Cat",
+      "contacts": {
+        "email": "helpfindjerry@mail.com",
+        "phone": "0919119191"
+      },
+      "position": "Home cat"
+    },
+    {
+      "id": "58b95c2c-06e8-422c-a2f3-1972dc50243d",
+      "fullName": "Last Person",
+      "contacts": {
+        "email": "ipromise@mail.ua",
+        "phone": "0366666666"
+      },
+      "birthday": "2013-11-12T23:16:53.000Z",
+      "dateOfHiring": "2022-11-18T22:00:00.000Z",
+      "position": "noone"
+    },
+    {
+      "id": "fb4587fb-0c3a-4d4f-aaf2-08a9f7c7e04f",
+      "fullName": "Jack Sparrow",
+      "contacts": {
+        "email": "notime@mail.us",
+        "phone": "0333333333"
+      },
+      "position": "Pirate"
+    },
+    {
+      "id": "302afec4-0704-4b4c-9612-40f398565af7",
+      "fullName": "Spider Man",
+      "contacts": {
+        "email": "heighbor@mail.us",
+        "phone": "0636363633"
+      },
+      "position": "Student"
     }
   ]
 }
